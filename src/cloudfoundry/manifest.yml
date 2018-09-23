@@ -1,0 +1,15 @@
+---
+applications:
+- name: mqtt-listener
+  memory: 512M
+  host: mqtt-listener
+  path: target/mqtt-listener-example-${version}.jar
+  services:
+  - mqtt-listener-messages
+  - kafka-mqtt-instance
+  env:
+    VERSION: ${version}
+    KAFKA_TOPIC: mqtt-listener-topic
+    MQTT_TOPIC: mqtt-listener/test-data
+    MQTT_CNAME: mqtt-listener
+

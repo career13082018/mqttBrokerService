@@ -1,0 +1,7 @@
+services:
+  kafka:
+    keySerializer: org.apache.kafka.common.serialization.StringSerializer
+    valueSerializer: org.apache.kafka.common.serialization.StringSerializer
+logging:
+  level:
+    org.trustedanalytics.mqttlistener: DEBUG
